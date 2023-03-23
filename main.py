@@ -10,10 +10,8 @@ from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 from flask_gravatar import Gravatar
 import smtplib
 import os
-from dotenv import load_dotenv
 from functools import wraps
 
-load_dotenv()
 
 EMAIL = os.getenv("EMAIL")
 PASSWORD = os.getenv("PASSWORD")
