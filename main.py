@@ -69,8 +69,8 @@ class Comment(db.Model):
     parent_post = relationship("BlogPost", back_populates="comments")
     text = db.Column(db.String(500), nullable=False)
 
-# with app.app_context():
-#     db.create_all()
+with app.app_context():
+    db.create_all()
 
 
 gravatar = Gravatar(app, size=80, rating='g', default='retro', force_default=False, force_lower=False,
